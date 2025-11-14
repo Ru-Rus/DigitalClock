@@ -1,0 +1,1 @@
+start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "C:\vs code\DigitalClock\index.html"
