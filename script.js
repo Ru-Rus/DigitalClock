@@ -77,7 +77,25 @@ function startCountdown() {
   setInterval(updateCountdown, 1000);
 }
 
-function updateCountdown() {
+// function updateCountdown() {
+  // const targetDate = new Date("2027-08-29T00:00:00");
+  // const now = new Date();
+  // const diff = targetDate - now;
+
+  // if (diff <= 0) {
+  //   document.getElementById('countdown').textContent = "The date has arrived";
+  //   return;
+  // }
+
+  // const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  // const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  // const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  // const seconds = Math.floor((diff / 1000) % 60);
+
+  // document.getElementById('countdown').textContent =
+  //   `${days}d ${hours}h ${minutes}m ${seconds}s`;
+// }
+  function updateCountdown() {
   const targetDate = new Date("2027-08-29T00:00:00");
   const now = new Date();
   const diff = targetDate - now;
@@ -87,12 +105,13 @@ function updateCountdown() {
     return;
   }
 
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((diff / (1000 * 60)) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
+  const totalDays = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const totalWeeks = Math.floor(totalDays / 7);
+  const totalMonths = Math.floor(totalDays / 30.44);
+  const totalYears = Math.floor(totalDays / 365.25);
 
   document.getElementById('countdown').textContent =
-    `${days}d ${hours}h ${minutes}m ${seconds}s`;
-}
+    `${totalDays} days | ${totalWeeks} weeks | ${totalMonths} months | ${totalYears} years`;
+  }
+
 
