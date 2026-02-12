@@ -7,7 +7,7 @@ body {
   color: limegreen;
   font-family: monospace;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
 }
 
 #day-date {
@@ -16,7 +16,7 @@ body {
 }
 
 #clock {
-  font-size: 12em;
+  font-size: 10em;
   font-weight: bold;
   margin-bottom: 0.3em;
 }
@@ -38,3 +38,37 @@ body {
   margin-top: 20px;
 }
 
+#t1, #t2, #t3 {
+  font-size: 2em;
+  font-weight: bold;  
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+#clock-container {
+  width: 100%;
+  max-width: 100%;
+}
+
+#day-date {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+#clock {
+  font-size: clamp(3rem, 12vw, 10rem);
+}
+
+#location {
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+#countdown {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+#t1, #t2, #t3 {
+  font-size: clamp(1rem, 3vw, 2rem);
+}
